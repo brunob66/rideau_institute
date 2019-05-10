@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rideau Institute</title>
+    <style>
+        * {
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        
+        html,body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7em;
+        }
+        
+        .container {
+            margin: auto;
+            max-width: 1100px;
+        }
+        
+        header .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 1rem 0;
+        }
+        
+        header .search {
+            text-align: right;
+        }
+        
+        nav .nav{
+            background-color: #00529c;
+        }
+        
+        nav .grid {
+            display: grid;
+            grid-template-columns: repeat(8, auto);
+            list-style: none;
+            text-align: center;
+            color:white;
+            padding:0.5rem 0;
+        }
+        
+        .donate{
+            background-color: lightseagreen;
+        }
+        
+        .donate:hover{
+            background-color: red;
+        }
+        
+        main .main {
+            background-color: #eaeff8;
+        }
+        
+        main .showcase {
+            background: url('img/cover.jpg') no-repeat center center/cover; 
+            height: 400px;
+            padding: 17rem 0 0 0;
+        }
+        
+        main .title{
+            display: inline-block;
+            vertical-align: bottom;
+            font-size: 1.5rem;
+            background: rgba(0,0,0,0.8);
+            color:#fff;
+            padding: 5px 5px;
+            /* border: none; */
+            cursor: pointer;
+        }
+        
+        main .text{
+            display: inline-block;
+            font-size: 0.9rem;
+            color: #fff;
+            background: rgba(0,0,0,0.8);
+            padding: 5px;
+            /* border: none; */
+        }
+        
+        section .grid {
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            list-style: none;
+            text-align: center;
+            padding:1rem 0;
+        }
+        
+        footer .sub {
+            background-color: #00529c;
+        }
+        
+        footer .grid {
+            display: grid;
+            grid-template-columns: 2fr 2fr 1fr;
+            list-style: none;
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="container"> 
+            <div class="grid">
+                <img src="img/NewRILogo2010-Web.png" alt="Rideau Institute Logo">
+                <div class="search">Search Bar</div>
+            </div>
+        </div>        
+    </header>
+    
+    <nav>
+        <div class="nav">
+            <div class="container">
+                <ul class="grid">
+                    <li>Blog</li>
+                    <li>Publications</li>
+                    <li>Videos</li>
+                    <li>Internships</li>
+                    <li>Sign-up</li>
+                    <li>About</li>
+                    <li>Our Team</li>
+                    <li class="donate">Donate</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <main>
+        <div class="main">
+            <div class="container">
+                <div class="showcase">
+                    <div class="title">Lorem ipsum dolor sit amet, consectetur</div>
+                    <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet possimus nihil delectus nulla quibusdam! Nulla reprehenderit <br>officia saepe velit accusamus quod, inventore modi facere commodi omnis perferendis neque, possimus vel.</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <section>
+        <div class="container">
+            <ul class="grid">
+                <li>
+                    <div>   
+                        <img src="img/yemen-in-crisis_giles-clarke_008-240x140.jpg" alt="">
+                        Article 1<br>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, quisquam.
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="img/665003303001_6025644815001_6025538221001-vs-e1555698901600-240x140.jpg" alt="">
+                        Article 2<br>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, quisquam.
+                    </div>
+                </li>
+                <li>
+                    <img src="img/800px-Grand_Hall_de_Justice_de_Palais_de_La_Paix_à_La_Haye_Pays-Bas-240x140.jpg" alt="">
+                    Article 3<br>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, quisquam.
+                </li>
+                <li>
+                    <img src="img/Trump_shaking_hands_with_Kim_in_Hanoi_Summit-e1553278793273-240x140.jpg" alt="">
+                    Article 4<br>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, quisquam.
+                </li>
+            </ul>
+        </div>      
+    </section>
+    
+    <footer>
+        <div class="sub">
+            <div class="container">
+                <ul class="grid">
+                    <li>Contact<br>
+                        Rideau Institute/L’Institut Rideau<br>
+                        63 Sparks St, Suite 608<br>
+                        Ottawa, ON K1P 5A6<br>
+                        Tel. 613 565-9449<br>
+                        operations@rideauinstitute.ca<br>
+                        
+                        
+                    </li>
+                    <li>Media Inquiries<br>
+                        Contact Peggy Mason<br>
+                        Email: pmason@rideauinstitute.ca<br>
+                        Tel. 613 565-9449 ex.24<br>
+                        Cell 613 612-6360<br>
+
+                    </li>
+                    <li>Social Media</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+    
+    
+</body>
+</html>
