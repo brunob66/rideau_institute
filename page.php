@@ -1,5 +1,16 @@
-<?php get_header();?>
+<?php get_header();
 
-page.php
+while(have_posts()) {
+  the_post(); ?>
 
-<?php get_footer();?>
+<h2><?php the_title();?></h2>
+<?php the_content();?>
+
+
+
+
+
+<?php }
+
+
+get_footer(); ?>

@@ -1,25 +1,42 @@
 <?php get_header();?>
 
-<?php
+<article>
 
-while(have_posts()) {
-  the_post();
+  <div class="container">
 
-  ?>
+    <div class="single-container">
 
-<h2>
-  <? the_title();?>
-</h2>
-Posted by <?php the_author();?>
+      <?php
 
-<img src="<?php echo get_the_post_thumbnail_url(get_the_ID())?>">
+  while(have_posts()) {
+    the_post(); ?>
 
-<?php the_content();
-  comment_form();
+      <h2><?php the_title();?></h2>
+
+      <div class="post-image">
+
+        <?php the_post_thumbnail();?>
+
+      </div>
+
+      <?php the_content();?>
 
 
-}
 
-?>
 
-<?php get_footer();?>
+      <?php
+      previous_post_link();
+      next_post_link();   
+      
+      
+      ?>
+
+
+
+      <?php } ?>
+
+    </div>
+  </div>
+</article>
+
+<?php get_footer(); ?>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
 
 <head>
   <?php wp_head();?>
@@ -10,27 +10,29 @@
 <body>
 
   <header>
+    <div class="container">
+      <div class="header-grid">
 
-    <nav class="container">
+        <div class="site-branding">
+          <a href="#">
+            <img class="logo-img" src="<?php echo get_template_directory_uri(); ?>/img/header_logo.gif" alt="">
+          </a>
+        </div>
 
-      <div>
-        <a href="#">
-          <img class="logo-img" src="<?php echo get_template_directory_uri(); ?>/img/header_logo.gif" alt="">
-        </a>
+        <nav>
+          <?php 
+            wp_nav_menu( 
+              array(
+                'theme_location'  => 'primary-menu', 
+              )
+            );
+          ?>
+        </nav>
+
+        <div class="donate-area">
+          <button class="donate-button" onclick="window.location.href = 'http://google.com';">Donate</button>
+        </div>
+
       </div>
-
-      <?php 
-        wp_nav_menu( 
-          array(
-            'theme_location'  => 'primary-menu', 
-          )
-        );
-      ?>
-
-      <div class="donate-button">
-        <button>Donate</button>
-      </div>
-
-    </nav>
-
+    </div>
   </header>
