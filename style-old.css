@@ -1,0 +1,314 @@
+/* 
+Theme Name: Rideau Institute
+Author: Bruno Bernardo
+Author URI: 
+Description: Theme for Rideau Institute
+Version: 1.0
+*/
+
+/* DEFAULT CLASSES */
+
+* {
+  font-family: 'Work Sans', sans-serif;  
+}
+
+body {
+  margin: 0;
+  background-color: aliceblue;  
+}
+
+.container {
+  width: 1200px;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color:#0c509a;
+}
+
+a:hover {
+  color: #00ddff !important;
+}
+
+/* HEADER */
+
+header {
+  background-color: white;
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: 600;
+} 
+
+.header-grid {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+}
+
+.site-branding .logo-img {
+  width: 150px;
+  padding: 5px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav .menu-main-container {
+  width: 100%;
+}
+
+nav .menu {
+  padding: 0 15px 0 50px;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.donate-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-around; 
+}
+
+.donate-button {
+  width: 110px;
+  height: 45px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #FFFFFF; 
+  background-color: #0C509A; 
+  border: 0;
+
+}
+
+.donate-button:hover {
+  background-color: #00ddff; 
+  cursor: pointer;
+}
+
+/* FOOTER */
+
+footer {
+  width: 100%;
+  background-color: #0c509a;
+  padding-bottom: 32px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+.footer-section{
+  color: #fff;
+  line-height: 1.5;
+}
+
+.footer-section h3{
+  color: #00ddff;
+  font-weight: 600;
+}
+
+/* FRONT PAGE: SHOWCASE */
+
+#showcase {
+  height: 90vh;
+  background: linear-gradient(rgba(12,80,154,0.4),rgba(12,80,154,0.4)), url(img/drone.jpg);
+  background-size: cover;
+  filter: brightness( 75% ) contrast( 150% ) saturate( 100% ) blur( 0px ) hue-rotate( 0deg );
+}
+
+.showcase-content {
+  position: absolute;
+  top: 150px;
+  padding: 5px;
+  width: 450px;
+  color:white;
+  line-height: 2;
+}
+
+.showcase-content h1 {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+.showcase-content p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* FRONT PAGE: RECENT POSTS */
+
+.rp-header {
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #0c509a;
+  text-align: center;
+  padding: 20px;
+}
+
+
+.rp-grid {
+  display: flex;
+  justify-content: space-around;
+}
+
+.rp-card {
+  width: 500px;
+  background-color: white;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rp-image {
+  overflow: hidden;
+}
+
+.rp-image img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  transition: all 0.7s ease;
+
+}
+
+.rp-image img:hover{
+  transition: all 0.7s ease;
+  transform: scale(1.3);
+  object-fit: cover;
+  max-height: 300px;
+}
+
+.rp-card-container {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.rp-title {
+  line-height: 1.7;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.rp-date {
+  padding-bottom: 10px;
+  border-bottom: solid 1px #0c509a;
+  font-size: 0.9rem;
+  color: #0c509a;
+}
+
+.rp-excerpt {
+  line-height: 1.7rem;
+}
+
+.rp-read-more {
+  width: 100%;
+  text-align: right;
+  font-weight: 500;
+}
+
+
+/* SINGLE POST */
+
+.single-container {
+  margin: 50px 0;
+  background-color: #fff;
+  padding: 25px;
+  line-height: 1.7;
+}
+
+.single-container h2 {
+  text-align: center;
+}
+
+.single-container p {
+  margin-bottom: 24px;
+}
+
+.single-container blockquote {
+  border-left: 5px solid #0c509a;
+  padding: 0px 10px;
+  font-style: italic;
+}
+
+.post-image img{
+  display: block;
+  margin: auto;
+  max-width: 600px;
+  height: auto;
+  padding: 20px;
+}
+
+@media (max-width: 1200px){
+
+.container {
+  width: 100%;
+}
+}
+
+
+
+@media (max-width: 768){
+
+.container {
+  width: 100%;
+}
+
+nav {
+  display: none;
+}
+
+.site-branding .logo-img {
+  width: 100px;
+  padding: 15px;
+}
+#showcase {
+  height: 40vh;
+  background: linear-gradient(rgba(12,80,154,0.4),rgba(12,80,154,0.4)), url(img/drone.jpg);
+  background-size: cover;
+  background-position: center center;
+  filter: brightness( 75% ) contrast( 150% ) saturate( 100% ) blur( 0px ) hue-rotate( 0deg );
+}
+
+.showcase-content {
+  position: absolute;
+  top: 100px;
+  padding: 15px;
+  width: 100%;
+  color:white;
+  line-height: 2;
+}
+
+.showcase-content h1 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.showcase-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.footer-grid {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+
+}
+
+
+}

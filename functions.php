@@ -3,13 +3,30 @@
 // Adding CSS & JS files
 
 function ri_setup() {
+
 wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
 // wp_enqueue_style('font-awesome', '<add link>');
-wp_enqueue_style('style', get_stylesheet_uri());
-// wp_enqueue_script('main', get_theme_file_uri('/js/main.js'), null, microtime(), true);
+wp_enqueue_style('bootstrap-css', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', NULL, microtime());
+wp_enqueue_style('style', get_stylesheet_uri(), NULL, microtime());
+
+// wp_enqueue_script('main', get_theme_file_uri('/js/main.js'), NULL, microtime(), true);
+wp_enqueue_script('jquery','https://code.jquery.com/jquery-3.3.1.slim.min.js', NULL, microtime(), true);
+wp_enqueue_script('popper','https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', NULL, microtime(), true);
+wp_enqueue_script('bootstrap-js','https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', NULL, microtime(), true);
+
 }
 
 add_action('wp_enqueue_scripts', 'ri_setup');
+
+// Adding features
+
+function ri_features() {
+  add_theme_support('title-tag');
+
+}
+
+
+add_action('after_setup_theme', 'ri_features');
 
 // Adding theme support
 

@@ -1,16 +1,29 @@
-<?php get_header();
+<?php get_header();?>
 
-while(have_posts()) {
+<div class="container">
+
+
+
+
+  <?php while(have_posts()) {
   the_post(); ?>
 
-<h2><?php the_title();?></h2>
-<?php the_content();?>
+  <h1><?php the_title();?></h1>
+
+  <div class="generic-content">
+
+    <?php the_content(); ?>
+
+  </div>
 
 
 
 
+  <?php } ?>
 
-<?php }
 
 
-get_footer(); ?>
+</div>
+
+
+<?php get_footer(); ?>
