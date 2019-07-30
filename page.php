@@ -1,8 +1,6 @@
 <?php get_header();?>
 
-<div class="container">
-
-
+<div class="container-fluid bg-alice">
 
 
   <?php while(have_posts()) {
@@ -10,11 +8,8 @@
 
   <h1><?php the_title();?></h1>
 
-  <div class="generic-content">
+  <?php the_content(); ?>
 
-    <?php the_content(); ?>
-
-  </div>
 
 
 
