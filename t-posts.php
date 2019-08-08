@@ -1,10 +1,12 @@
+<?php /* Template Name: Blog */ ?>
+
 <?php get_header(); ?>
 
 <div class="container-fluid bg-alice">
 
   <div class="container pt-4">
 
-    <h3 class="text-rideau text-center pb-4"><?php echo wp_title('');?></h3>
+    <h3 class="text-rideau text-center pb-4">Blog</h3>
 
     <div class="row">
 
@@ -12,8 +14,13 @@
 
         <?php
 
-                while(have_posts()) {
-                the_post(); ?>
+            $loop = new WP_Query( array(
+                'post_type' => 'post',
+              )
+            );
+
+            while($loop->have_posts()) {
+            $loop->the_post(); ?>
 
         <div class="card mb-4">
           <img src="<?php echo get_the_post_thumbnail_url()?>" alt="" class="card-img-top">

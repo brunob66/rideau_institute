@@ -20,7 +20,7 @@
 
               <p class="card-text"><?php the_content();?></p>
 
-              <div class="row pt-5">
+              <div class="row pt-3">
                 <div class="col-12 d-flex justify-content-center align-self-center">
                   <a href="#" class="btn btn-primary">Top</a>
                 </div>

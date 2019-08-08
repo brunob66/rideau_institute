@@ -5,8 +5,7 @@
     <div class="container pt-4">
       <h3 class="text-rideau text-center pb-4"><?php the_archive_title('Archive &raquo; ');?></h3>
       <div class="row">
-        <div class="col-lg-8 offset-2">
-
+        <div class="col-lg-8">
 
           <?php
 
@@ -29,6 +28,44 @@
             <?php echo paginate_links();?>
           </div>
         </div>
+
+        <aside class="col-lg-4 px-4">
+
+          <div class="text-rideau pb-3">
+
+            <i class="fas fa-search"></i><span class="pl-2 sidebar-header">Search</span>
+            <div class="py-3">
+              <?php get_search_form();?>
+            </div>
+
+          </div>
+
+          <div class="text-rideau pb-3">
+
+            <i class="fas fa-calendar-alt"></i><span class="pl-2 sidebar-header">Archives</span>
+            <div class="py-3">
+              <select id="archive-dropdown" name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
+                <option value=""><?php echo esc_attr( __( 'Select Month' ) ); ?></option>
+                <?php wp_get_archives( array( 'type' => 'monthly', 'format' => 'option', 'show_post_count' => 0 ) ); ?>
+              </select>
+
+            </div>
+          </div>
+
+
+          <div class="text-rideau pb-3">
+
+            <i class="fab fa-twitter"></i><span class="pl-2 sidebar-header">Twitter</span>
+            <div class="py-3">
+              <?php echo do_shortcode('[twitter_profile screen_name="rideauinstitute" height="800" limit="5" chrome="noheader,nofooter,noborders,noscrollbar"]'); ?>
+            </div>
+
+          </div>
+
+        </aside>
+
+
+
 
       </div>
 

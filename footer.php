@@ -1,7 +1,7 @@
 <?php wp_footer();?>
 
 <footer>
-  <div class="container-fluid bg-rideau">
+  <div class="container-fluid">
     <div class="container">
       <div class="row py-4">
         <div class="col-md-4">
@@ -21,7 +21,10 @@
         </div>
         <div class="col-md-4">
           <h5 class="text-rideau-light">Follow Us</h5>
-          <p class="text-light">aaaaa</p>
+          <a class="btn btn-outline-primary btn-sm align-middle text-light" href="https://www.facebook.com/RideauInstitute/"><i class="fab fa-facebook-f pr-2"></i>Facebook</a>
+          <a class="btn btn-outline-info btn-sm align-middle text-light" href="https://twitter.com/rideauinstitute"><i class="fab fa-twitter pr-2"></i>Twitter</a>
+
+
         </div>
 
 

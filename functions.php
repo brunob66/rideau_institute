@@ -34,6 +34,7 @@ function ri_init() {
   add_theme_support('post-thumbnails');
   add_theme_support('title-tag');
   add_theme_support('html5', array('comment-list', 'comment-form', 'search-form'));
+  add_filter( 'sharing_services_email', '__return_true' );
 }
 
 add_action('after_setup_theme', 'ri_init');
@@ -41,20 +42,38 @@ add_action('after_setup_theme', 'ri_init');
 // Projects Post Type
 
 function ri_custom_post_type() {
-  register_post_type('project', 
+  register_post_type('publications', 
     array(
-      'rewrite' => array('slug' => 'projects'),
+      'rewrite' => array('slug' => 'publications'),
       'labels' => array(
-        'name' => 'Projects', 
-        'singular_name' => 'Project',
-        'add_new_item' => 'Add New Project',
-        'edit_item' => 'Edit Project'),
-      'menu-icon' => 'dashicons-clipboard',
+        'name' => 'Publications', 
+        'singular_name' => 'Publication',
+        'add_new_item' => 'Add New Publication',
+        'edit_item' => 'Edit Publication'),
+      'menu_icon' => 'dashicons-admin-site',
       'public' => true,
       'has_archive' => true,
       'supports' => array ('title', 'thumbnail', 'editor', 'excerpt', 'comments')
     )
   );
+
+   register_post_type('videos', 
+    array(
+      'rewrite' => array('slug' => 'videos'),
+      'labels' => array(
+        'name' => 'Videos', 
+        'singular_name' => 'Video',
+        'add_new_item' => 'Add New Video',
+        'edit_item' => 'Edit Video'),
+      'menu_icon' => 'dashicons-video-alt',
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array ('title', 'thumbnail', 'editor', 'excerpt', 'comments')
+    )
+  );
+
+
+
 };
 
 add_action('init', 'ri_custom_post_type');
