@@ -52,7 +52,7 @@ function ri_custom_post_type() {
         'edit_item' => 'Edit Publication'),
       'menu_icon' => 'dashicons-admin-site',
       'public' => true,
-      'has_archive' => true,
+      'has_archive' => false,
       'supports' => array ('title', 'thumbnail', 'editor', 'excerpt', 'comments')
     )
   );
@@ -67,7 +67,7 @@ function ri_custom_post_type() {
         'edit_item' => 'Edit Video'),
       'menu_icon' => 'dashicons-video-alt',
       'public' => true,
-      'has_archive' => true,
+      'has_archive' => false,
       'supports' => array ('title', 'thumbnail', 'editor', 'excerpt', 'comments')
     )
   );

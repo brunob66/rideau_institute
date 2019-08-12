@@ -5,7 +5,7 @@
 <section id="blog-posts">
   <div class="container-fluid bg-alice">
     <div class="container pt-4">
-      <h3 class="text-rideau text-center pb-4"><?php the_title();?></h3>
+      <h3 class="text-rideau text-center pb-4">Videos</h3>
       <div class="row">
 
 
