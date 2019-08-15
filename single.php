@@ -2,10 +2,10 @@
 
 <article>
   <div class="container-fluid bg-alice">
-    <div class="container py-5">
+    <div class="container px-0 py-4">
       <div class="row ">
         <div class="col-lg-12">
-          <div class="card p-4">
+          <div class="card p-2">
             <div class="card-body">
 
               <?php
@@ -16,7 +16,7 @@
               <h4 class="card-title text-center"><?php the_title();?></h4>
 
 
-              <img class="featured-image m-auto py-4" src="<?php echo get_the_post_thumbnail_url();?>" alt="">
+              <img class="featured-image m-auto pt-3 pb-0" src="<?php echo get_the_post_thumbnail_url();?>" alt="">
 
               <p class="card-text"><?php the_content();?></p>
 
@@ -44,5 +44,14 @@
   </div>
 
 </article>
+
+
+<section id="comments">
+  <div class="container-fluid bg-alice pb-4">
+    <div class="text-center container bg-white p-2">
+      <?php comment_form(); ?>
+    </div>
+  </div>
+</section>
 
 <?php get_footer(); ?>

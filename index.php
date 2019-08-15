@@ -28,7 +28,15 @@
         <?php } ?>
 
         <div class="d-flex justify-content-center mb-4">
-          <?php echo paginate_links();?>
+
+          <?php $args = array(
+	          'mid_size'           => 1,
+	          'prev_text'          => __('«'),
+            'next_text'          => __('»'),
+	        );
+
+		      echo paginate_links($args);?>
+
         </div>
 
       </section>

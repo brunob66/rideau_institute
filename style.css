@@ -1,9 +1,11 @@
 /* 
 Theme Name: Rideau Institute
+Theme URI: https://https://rideauinstitute.ca/
 Author: Bruno Bernardo
-Author URI: 
-Description: Theme for Rideau Institute
+Author URI: N/A
+Description: Theme for Rideau Institute's website and blog.
 Version: 1.0
+License: Not for distribution
 */
 
 * {
@@ -33,11 +35,23 @@ Version: 1.0
 .btn-primary{
   background-color: #0c509a !important;
   border: 0px;
+  color: #fff !important;
 }
 
 .btn-primary:hover{
   background-color: #00ddff !important;
   border: 0px;
+  color: #fff !important;
+}
+
+a {
+ text-decoration: none;
+ color: #0c509a  !important; 
+}
+
+a:hover {
+ text-decoration: none;
+ color: #00ddff !important;
 }
 
 /* NAVBAR */
@@ -120,6 +134,22 @@ blockquote {
   font-style: italic;
 }
 
+/* PAGE NUMBERS */
+
+.page-numbers {
+	padding: 2px;
+	border: 0;
+	background-color: aliceblue !important;
+	color: #0c509a !important;
+	text-decoration: none;
+}
+
+.page-numbers:hover {
+  	color: #00ddff !important;
+		text-decoration: none;
+}
+
+
 /* SIDEBAR */
 
 .sidebar-header {
@@ -146,7 +176,7 @@ blockquote {
 
 /* MEDIA QUERIES */
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
 
 .showcase {
   height: 50vh;
@@ -164,5 +194,21 @@ blockquote {
   
 }
 
+header .container-fluid,
+header .container{
+	padding: 0;
+}	
+	
+.navbar {
+	flex-wrap: none;
+}
+	
+#donate-mobile {
+	display: block;
+}
 
+#donate-desktop {
+	display: none;
+}
+	
 }

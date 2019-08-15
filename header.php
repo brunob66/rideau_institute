@@ -19,9 +19,7 @@
             <img src="<?php echo content_url(); ?>/uploads/2019/08/layout-header-logo.gif" alt="Rideau Institute Logo" width="125">
           </a>
 
-          <form action="" class="form-inline ml-auto mr-0">
-            <button class="d-none btn btn btn-primary" type="submit">Donate</button>
-          </form>
+          <a id="donate-mobile" href="<?php echo site_url('/donate')?>" class="btn btn-primary nav-item nav-link pl-1"> Donate </a>
 
           <button class="navbar-toggler m-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -38,7 +36,7 @@
               <a href="<?php echo site_url('/sign-up')?>" class="nav-item nav-link p-3"> Sign-up </a>
             </ul>
           </div>
-          <a href="<?php echo site_url('/donate')?>" class="btn btn-primary nav-item nav-link px-3"> Donate </a>
+          <a id="donate-desktop" href="<?php echo site_url('/donate')?>" class="btn btn-primary nav-item nav-link px-3"> Donate </a>
         </nav>
       </div>
     </div>

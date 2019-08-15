@@ -61,29 +61,12 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4 mb-4 d-flex align-items-stretch">
-          <div class="card ">
-            <div class="card-body ">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias distinctio recusandae velit sunt ut modi quasi ullam esse autem com!
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4 d-flex align-items-stretch">
-          <div class="card">
-            <div class="card-body">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et officia incidunt a repellendus ducimus eius? Eos, perferendis aut natus voluptates voluptatem distinctio pariatur facilis quae illum earum vel, libero quis.
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4 d-flex align-items-stretch">
-          <div class="card">
-            <div class="card-body">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, itaque. Consequuntur perspiciatis autem sint cum quas repudiandae ad. Voluptates corporis veritatis quibusdam error eum dolores.
-            </div>
-          </div>
+        <div class="col-md-12">
+          <?php echo do_shortcode('[custom-twitter-feeds num=3]'); ?>
         </div>
       </div>
     </div>
+  </div>
   </div>
 </section>
 
