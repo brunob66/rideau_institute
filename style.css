@@ -65,6 +65,10 @@ a:hover {
   color: #00ddff !important;
 }
 
+#donate-mobile {
+	display: none;
+}
+
 /* SHOWCASE */
 
 .showcase {
