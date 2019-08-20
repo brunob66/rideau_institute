@@ -13,22 +13,47 @@
 
 $loop = new WP_Query( array(
                 'post_type' => 'publications',
+                'posts_per_page' => 100,
+                'orderby' => 'meta_value',
+                'meta_key' => 'pub_date',
+                'order' => 'DESC'
               )
             );
 
             while($loop->have_posts()) {
-            $loop->the_post(); ?>
+            $loop->the_post(); 
 
+            $img = get_post_meta($post->ID, 'pub_thumbnail', true);
+            $pdf = get_post_meta($post->ID, 'pub_pdf', true);
 
-        <div class="col-lg-3">
-          <div class="card mb-4">
-            <img src="<?php echo get_the_post_thumbnail_url()?>" alt="" class="card-img-top-publications">
-            <div class="card-body">
-              <h5 class="card-title text-center"><a href="<?php the_permalink();?>"><?php the_title();?></a></h5>
-              <p class="card-text"><?php the_excerpt(); ?></p>
+        ?>
+
+        <div class="col-lg-6 d-flex align-items-stretch">
+          <div class="row mx-1 mb-4">
+            <div class="card col-lg-4 p-0">
+              <img src="<?php echo wp_get_attachment_url( $img );?>" alt="" class="card-img-top-publications">
+            </div>
+            <div class="card col-lg-8 p-3">
+              <p class="card-text"><b><?php the_title();?></b><br><span class="small"><em><?php the_field('pub_subtitle'); ?></em></span></p>
+
+              <p class="small">
+                <?php the_field('pub_author'); ?><br>
+                <?php the_field('pub_date'); ?><br>
+
+                <?php if( get_field('isbn') ): ?>
+                ISBN: <?php the_field('isbn'); ?>
+                <?php endif; ?>
+
+              </p>
+
+              <a href="<?php echo wp_get_attachment_url( $pdf );?>" class="mr-0 ml-auto mt-auto btn btn-primary btn-sm">Download PDF</a>
             </div>
           </div>
         </div>
+
+
+
+
 
 
         <?php } ?>

@@ -53,7 +53,7 @@ function ri_custom_post_type() {
       'menu_icon' => 'dashicons-admin-site',
       'public' => true,
       'has_archive' => false,
-      'supports' => array ('title', 'thumbnail', 'editor', 'excerpt', 'comments')
+      'supports' => array ('title','custom-fields')
     )
   );
 
