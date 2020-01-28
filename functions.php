@@ -56,12 +56,12 @@ function ri_custom_post_type() {
       'supports' => array ('title','custom-fields')
     )
   );
-
+	
    register_post_type('videos', 
     array(
       'rewrite' => array('slug' => 'videos'),
       'labels' => array(
-        'name' => 'Videos', 
+        'name' => 'Videos/Podcast', 
         'singular_name' => 'Video',
         'add_new_item' => 'Add New Video',
         'edit_item' => 'Edit Video'),
@@ -106,5 +106,16 @@ function ri_widgets_init() {
 
 }
 add_action( 'widgets_init', 'ri_widgets_init' );
+
+
+function wpb_move_comment_field_to_bottom( $fields ) {
+$comment_field = $fields['comment'];
+unset( $fields['comment'] );
+$fields['comment'] = $comment_field;
+return $fields;
+}
+  
+add_filter( 'comment_form_fields', 'wpb_move_comment_field_to_bottom');
+
 
 ?>

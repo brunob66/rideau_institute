@@ -10,7 +10,6 @@
 
 
         <?php
-
 $loop = new WP_Query( array(
                 'post_type' => 'publications',
                 'posts_per_page' => 100,
@@ -27,7 +26,7 @@ $loop = new WP_Query( array(
             $pdf = get_post_meta($post->ID, 'pub_pdf', true);
 
         ?>
-
+		  
         <div class="col-lg-6 d-flex align-items-stretch">
           <div class="row mx-1 mb-4">
             <div class="card col-lg-4 p-0">
@@ -35,11 +34,10 @@ $loop = new WP_Query( array(
             </div>
             <div class="card col-lg-8 p-3">
               <p class="card-text"><b><?php the_title();?></b><br><span class="small"><em><?php the_field('pub_subtitle'); ?></em></span></p>
-
-              <p class="small">
+                            <p class="small">
                 <?php the_field('pub_author'); ?><br>
                 <?php the_field('pub_date'); ?><br>
-
+                
                 <?php if( get_field('isbn') ): ?>
                 ISBN: <?php the_field('isbn'); ?>
                 <?php endif; ?>
@@ -57,6 +55,7 @@ $loop = new WP_Query( array(
 
 
         <?php } ?>
+
 
 
 

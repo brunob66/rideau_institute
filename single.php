@@ -48,8 +48,8 @@
 
 <section id="comments">
   <div class="container-fluid bg-alice pb-4">
-    <div class="text-center container bg-white p-2">
-      <?php comment_form(); ?>
+    <div class="container bg-white p-2">
+	<?php comments_template(); ?>
     </div>
   </div>
 </section>
