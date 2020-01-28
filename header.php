@@ -29,7 +29,7 @@
             <ul class="navbar-nav ml-auto pr-3">
               <a href="<?php echo site_url('/posts')?>" class="nav-item nav-link p-3"> Blog </a>
               <a href="<?php echo site_url('/publications')?>" class="nav-item nav-link p-3"> Publications </a>
-              <a href="<?php echo site_url('/videos')?>" class="nav-item nav-link p-3"> Videos/Podcast </a>
+              <a href="<?php echo site_url('/videos')?>" class="nav-item nav-link p-3"> Video/Podcast </a>
               <a href="<?php echo site_url('/internships')?>" class="nav-item nav-link p-3"> Internships </a>
               <a href="<?php echo site_url('/about')?>" class="nav-item nav-link p-3"> About </a>
               <a href="<?php echo site_url('/governance')?>" class="nav-item nav-link p-3"> Governance </a>

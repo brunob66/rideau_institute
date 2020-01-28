@@ -61,7 +61,7 @@ function ri_custom_post_type() {
     array(
       'rewrite' => array('slug' => 'videos'),
       'labels' => array(
-        'name' => 'Videos/Podcast', 
+        'name' => 'Video/Podcast', 
         'singular_name' => 'Video',
         'add_new_item' => 'Add New Video',
         'edit_item' => 'Edit Video'),
