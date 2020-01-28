@@ -62,13 +62,13 @@ function ri_custom_post_type() {
       'rewrite' => array('slug' => 'videos'),
       'labels' => array(
         'name' => 'Video/Podcast', 
-        'singular_name' => 'Video',
-        'add_new_item' => 'Add New Video',
+        'singular_name' => 'Video/Podcast',
+        'add_new_item' => 'Add New Video/Podcast',
         'edit_item' => 'Edit Video'),
       'menu_icon' => 'dashicons-video-alt',
       'public' => true,
       'has_archive' => false,
-      'supports' => array ('title', 'thumbnail', 'editor', 'excerpt', 'comments')
+      'supports' => array ('title', 'thumbnail', 'editor', 'excerpt', 'comments', 'custom-fields')
     )
   );
 
