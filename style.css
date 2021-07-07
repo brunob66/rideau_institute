@@ -74,7 +74,7 @@ a:hover {
 
 .showcase {
   height: 90vh;
-  background: linear-gradient(rgba(12,80,154,0.4),rgba(12,80,154,0.4)), url(http://rideauinstitute.ca/wp-content/uploads/2019/08/layout-drone.jpg);
+  background: linear-gradient(rgba(12,80,154,0.4),rgba(12,80,154,0.4)), url(https://rideauinstitute.ca/wp-content/uploads/2019/08/layout-drone.jpg);
   background-size: cover;
   background-position: center top;
   filter: brightness( 75% ) contrast( 150% ) saturate( 100% ) blur( 0px ) hue-rotate( 0deg );
@@ -216,4 +216,37 @@ header .container{
 	display: none;
 }
 	
+}
+
+/* ALIGNMENT */
+
+img.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.aligncenter{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+ 
+img.alignright {
+    padding: 4px;
+    margin: 0 0 2px 7px;
+    display: inline;
+}
+ 
+img.alignleft {
+    padding: 4px;
+    margin: 0 7px 2px 0;
+    display: inline;
+}
+ 
+.alignright {
+    float: right;
+}
+ 
+.alignleft {
+    float: left;
 }

@@ -117,5 +117,19 @@ return $fields;
   
 add_filter( 'comment_form_fields', 'wpb_move_comment_field_to_bottom');
 
+function default_target_blank() {
+ 
+    ?>
+    <script>
+        jQuery(document).on( 'wplink-open', function( wrap ) {
+            if ( jQuery( 'input#wp-link-url' ).val() <= 0 )
+                jQuery( 'input#wp-link-target' ).prop('checked', true );
+        });
+    </script>
+    <?php
+}
+add_action( 'admin_footer-post-new.php', 'default_target_blank', 10, 0 );
+add_action( 'admin_footer-post.php', 'default_target_blank', 10, 0 );
 
+	
 ?>

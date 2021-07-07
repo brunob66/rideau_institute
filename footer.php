@@ -7,8 +7,8 @@
         <div class="col-md-4">
           <h5 class="text-rideau-light">Contact Information</h5>
           <p class="text-light">Rideau Institute / L’Institut Rideau<br>
-            63 Sparks St, Suite 608<br>
-            Ottawa, ON K1P 5A6<br>
+            PO Box 11312 Ottawa H<br>
+            Nepean, ON K2H 7V1<br>
             Tel. 613 565-9449<br>
             operations@rideauinstitute.ca</p>
         </div>
@@ -16,7 +16,7 @@
           <h5 class="text-rideau-light">Media Inquiries</h5>
           <p class="text-light">Peggy Mason<br>
             pmason@rideauinstitute.ca<br>
-            Tel. 613 565-9449 ext. 24<br>
+            Tel. 613 565-9449<br>
             Cell 613 612-6360</p>
         </div>
         <div class="col-md-4">

@@ -5,7 +5,7 @@
 <section id="blog-posts">
   <div class="container-fluid bg-alice">
     <div class="container pt-4">
-      <h3 class="text-rideau text-center pb-4">Video/Podcast</h3>
+      <h3 class="text-rideau text-center pb-4">Virtual Events</h3>
       <div class="row">
 
 
@@ -32,7 +32,10 @@ $loop = new WP_Query( array(
               <h5 class="card-title text-center"><a href="<?php the_permalink();?>"><?php the_title();?></a></h5>
               <p class="text-center small text-rideau date-border pb-1"><?php echo get_the_date(); ?></p>
               <p class="card-text"><?php the_excerpt(); ?></p>
-              <a href="<?php echo get_post_meta($post->ID, 'vid_link', true); ?>" class="mr-0 ml-auto mt-auto btn btn-primary btn-sm">Direct link</a>
+            </div>
+            <div class="pb-4 pr-4 ml-auto">
+              <a href="<?php the_permalink();?>" class="mr-0 ml-auto btn btn-primary btn-sm">Full text</a>
+              <a href="<?php echo get_post_meta($post->ID, 'vid_link', true); ?>" class="mr-0 ml-auto btn btn-primary btn-sm">Direct link</a>
             </div>
           </div>
         </div>
