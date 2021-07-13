@@ -17,13 +17,10 @@
   <div class="container-fluid bg-alice">
     <div class="container">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-8 mb-4">
           <h3 class="text-rideau py-4 text-center">Recent Posts</h4>
-        </div>
-      </div>
-
-      <div class="row">
-
+            
+		  
         <?php
         $args = array(
           'post_type' => 'post',
@@ -35,8 +32,7 @@
        ?>
 
 
-        <div class="col-md-6 mb-4 d-flex align-items-stretch">
-          <div class="card">
+          <div class="card mb-4">
             <img class="card-img-top" src="<?php echo get_the_post_thumbnail_url($post, $size)?>">
             <div class=" card-body d-flex flex-column">
               <h5 class="card-title text-center text-uppercase"><a href="<?php the_permalink();?>"><?php the_title();?></a></h5>
@@ -45,28 +41,27 @@
               <a href="<?php the_permalink();?>" class="mr-0 ml-auto mt-auto btn btn-primary">Read More</a>
             </div>
           </div>
-        </div>
+
 
 
         <?php } ?>
+        </div>
+		
+		        <div class="col-md-4 mb-4">
+
+          <h3 class="text-rideau py-4 text-center">Latest Tweets</h4>
+<?php echo do_shortcode('[twitter_profile screen_name="rideauinstitute" height="1000" limit="3" chrome="noheader,nofooter,noborders,noscrollbar"]'); ?>
       </div>
+      
+
+
+          
+
+      </div>
+		</div>
+	</div>
 </section>
 
-<section id="latest-tweets">
-  <div class="container-fluid bg-alice">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h3 class="text-rideau py-4 text-center">Latest Tweets</h4>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <?php echo do_shortcode('[custom-twitter-feeds num=3]'); ?>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <?php get_footer(); ?>
